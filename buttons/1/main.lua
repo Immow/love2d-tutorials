@@ -2,13 +2,15 @@ local button = {
 	x = 100,
 	y = 400,
 	width = 200,
-	height = 75
+	height = 75,
 }
 
-local function isMouseOnButton(b)
+local function isMouseOnButton(button)
 	local mx, my = love.mouse.getPosition()
-	if b.x <= mx and b.x + b.width >= mx and b.y <= my and b.y + b.height >= my then
+	if button.x <= mx and button.x + button.width >= mx and button.y <= my and button.y + button.height >= my then
 		return true
+	else
+		return false
 	end
 end
 
