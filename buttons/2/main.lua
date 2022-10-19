@@ -35,7 +35,7 @@ function love.update(dt)
 end
 
 function love.mousepressed(mx,my,mouseButton)
-	if button ~= 1 then return end
+	if mouseButton ~= 1 then return end
 	local hovered = isMouseOnButton(button, mx, my)
 	if hovered and mouseButton then
 		print("clicked")
